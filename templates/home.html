@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Home | CE341 Flask</title>
+</head>
+<body>
+    <h1>หน้า Home</h1>
+
+    <h2>ข้อมูลนักศึกษา</h2>
+    <p>ชื่อ: {{ name }}</p>
+    <p>รหัสนักศึกษา : {{ student_id }}</p>
+
+  
+
+    <h3>ลิงก์ที่เกี่ยวข้อง</h3>
+    <ul>
+        <li><a href="{{ github_url }}" target="_blank">GitHub Repository</a></li>
+        <li><a href="{{ dockerhub_url }}" target="_blank">Docker Hub Image</a></li>
+    </ul>
+
+    <hr>
+
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a> |
+        <a href="{{ url_for('git_page') }}">Git / GitHub</a> |
+        <a href="{{ url_for('docker_page') }}">Docker</a>
+    </nav>
+</body>
+</html>

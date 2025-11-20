@@ -1,0 +1,39 @@
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Git & GitHub | CE341 Flask</title>
+</head>
+<body>
+    <h1>สรุปความรู้เกี่ยวกับ Git และ GitHub</h1>
+
+    <h2>Git คืออะไร?</h2>
+    <p>
+        Git เป็นระบบควบคุมเวอร์ชัน (Version Control System: VCS) 
+        ที่ใช้เก็บประวัติการแก้ไขไฟล์โค้ด สามารถย้อนกลับไปดู/กู้ไฟล์เวอร์ชันเก่า ๆ ได้
+        และทำงานร่วมกันหลายคนได้สะดวก
+    </p>
+
+    <h2>GitHub คืออะไร?</h2>
+    <p>
+        GitHub เป็นบริการที่ให้เราเอา Git repository ไปเก็บบน Cloud 
+        ทำให้แชร์โค้ดให้คนอื่นดู/โหลด หรือทำงานร่วมกันผ่าน Internet ได้ง่าย
+    </p>
+
+    <h2>คำสั่งพื้นฐานของ Git</h2>
+    <ul>
+        <li><code>git init</code> : สร้าง Git repository ใหม่ในโฟลเดอร์ปัจจุบัน</li>
+        <li><code>git status</code> : ดูสถานะไฟล์ที่เปลี่ยนแปลง</li>
+        <li><code>git add .</code> : เพิ่มไฟล์ทั้งหมดเข้ามาใน staging area</li>
+        <li><code>git commit -m "ข้อความ"</code> : บันทึกการเปลี่ยนแปลงเป็น 1 commit</li>
+        <li><code>git remote add origin &lt;URL&gt;</code> : ผูก repo local กับ GitHub</li>
+        <li><code>git push -u origin main</code> : ส่งโค้ดขึ้น GitHub</li>
+    </ul>
+
+    <hr>
+
+    <nav>
+        <a href="{{ url_for('home') }}">กลับหน้า Home</a> |
+        <a href="{{ url_for('docker_page') }}">ไปหน้า Docker</a>
+    </nav>
+</body>
+</html>
