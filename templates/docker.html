@@ -1,0 +1,40 @@
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Docker | CE341 Flask</title>
+</head>
+<body>
+    <h1>สรุปความรู้เกี่ยวกับ Docker</h1>
+
+    <h2>Docker คืออะไร?</h2>
+    <p>
+        Docker เป็นแพลตฟอร์มสำหรับสร้างและรัน Container 
+        ซึ่งเป็นสภาพแวดล้อมแยกจากกัน ทำให้เราส่งแอปไปให้คนอื่นใช้งานได้ง่าย
+        โดยไม่ต้องกลัวปัญหาเรื่องการติดตั้ง dependency ต่าง ๆ
+    </p>
+
+    <h2>Image และ Container</h2>
+    <ul>
+        <li><b>Image</b> : แม่แบบ (template) ที่บอกว่าภายใน container มีอะไรบ้าง เช่น base image, โค้ด, dependencies</li>
+        <li><b>Container</b> : instance ที่รันมาจาก image 1 อัน (รันจริง ๆ)</li>
+    </ul>
+
+    <h2>คำสั่งที่ใช้บ่อย</h2>
+    <ul>
+        <li><code>docker build -t username/ce341-flask-web:latest .</code> – สร้าง image จาก Dockerfile ในโฟลเดอร์ปัจจุบัน</li>
+        <li><code>docker images</code> – ดูรายการ image ที่มีในเครื่อง</li>
+        <li><code>docker run -d -p 5000:5000 username/ce341-flask-web:latest</code> – รัน container แบบ background และ map port</li>
+        <li><code>docker ps</code> – ดู container ที่กำลังรันอยู่</li>
+        <li><code>docker stop &lt;CONTAINER_ID&gt;</code> – หยุด container</li>
+        <li><code>docker push username/ce341-flask-web:latest</code> – ส่ง image ขึ้น Docker Hub</li>
+    </ul>
+
+    
+    <hr>
+
+    <nav>
+        <a href="{{ url_for('home') }}">กลับหน้า Home</a> |
+        <a href="{{ url_for('git_page') }}">ไปหน้า Git/GitHub</a>
+    </nav>
+</body>
+</html>
